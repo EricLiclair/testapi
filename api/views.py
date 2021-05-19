@@ -6,10 +6,6 @@ from user.authentication import BearerTokenAuthentication
 from rest_framework.response import Response
 
 
-def testview(request, *args, **kwargs):
-    return Response("Hello World. Lets test this api", status=status.HTTP_200_OK)
-
-
 class CreateProfileView(generics.CreateAPIView):
     serializer_class = ProfileSerializer
     queryset = Profile.objects.all()

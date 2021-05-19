@@ -7,5 +7,4 @@ urlpatterns = [
     path('profiles', ListProfileView.as_view()),
     path('get-profile/<str:id>', GetProfileView.as_view()),
     path('update-profile/<str:id>', UpateProfileView.as_view()),
-    path('', testview),
 ]
