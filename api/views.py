@@ -26,7 +26,7 @@ class CreateProfileView(generics.CreateAPIView):
             data = ListProfileSerializer(profile).data
             return Response(data, status=status.HTTP_201_CREATED, headers=headers)
         except:
-            return Response({'Error': 'A Profile already exists.'})
+            return Response({'Error': 'A Profile already exists.'}, status=status.HTTP_403_FORBIDDEN)
 
 
 class ListProfileView(generics.ListAPIView):
